@@ -4,11 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Test Data!</title>
+  <title>MVC Tech Blog</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
+    <header>
+    <div class="tech_header">
+        <nav class="tech_nav">
+        <a class="tech_menu" href="#">Home</a>
+        <a class="tech_menu" href="#">Dashboard</a>
+        {{#if logged_in}}        
+        <a id="logout" class="tech_menu" href="#">Logout</a>
+        {{else}}
+        <a id="login" class="tech_menu" href="#">Login</a>
+        {{/if}}
+        
+        </nav>
+    </div>
+    <h1 class="tech_title">The Tech Blog</h1>
+    </header>
 
   <!--div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
@@ -41,6 +56,7 @@
   <script src="/js/logout.js"></script>
   {{/if}}
   -->
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </body>
 
 </html>
