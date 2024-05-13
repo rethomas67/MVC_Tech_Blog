@@ -12,12 +12,12 @@
     <header>
     <div class="tech_header">
         <nav class="tech_nav">
-        <a class="tech_menu" href="#">Home</a>
+        <a class="tech_menu" href="/">Home</a>
         <a class="tech_menu" href="#">Dashboard</a>
         {{#if logged_in}}        
         <a id="logout" class="tech_menu" href="#">Logout</a>
         {{else}}
-        <a id="login" class="tech_menu" href="#">Login</a>
+        <a id="login" class="tech_menu" href="/login">Login</a>
         {{/if}}
         
         </nav>
@@ -51,12 +51,11 @@
     </footer>
   </div>
 
-  <!-- Render script for logged in users only >
+  <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-  -->
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  
 </body>
 
 </html>
