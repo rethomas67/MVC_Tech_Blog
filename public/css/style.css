@@ -97,3 +97,9 @@ h1 {
   margin: 0 0 0 50px;
   color: var(--light);
 }
+
+.new_post {
+  display: flex;
+  margin-top: 150px;
+  justify-content: center;
+}

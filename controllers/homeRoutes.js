@@ -2,9 +2,9 @@ const router = require("express").Router();
 const { User, Post } = require("../models");
 const withAuth = require("../utils/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all post and JOIN with user data
     const postData = await Post.findAll({
       include: [
         {
@@ -44,6 +44,10 @@ router.get("/signup", (req, res) => {
   }
 
   res.render("signup");
+});
+
+router.get("/addPost", withAuth, (req, res) => {
+  res.render("addPost", { logged_in: req.session.logged_in });
 });
 
 module.exports = router;

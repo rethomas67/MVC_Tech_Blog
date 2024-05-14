@@ -1,0 +1,22 @@
+<div class="card">
+  <h3 class="card_header">Create New Post</h3>
+  <form class="card_body add_post_form" id="add_post_form">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" id="title" name="post_title" class="form-input" />
+
+    <label class="form-label" for="content">Content</label>
+    <textarea
+      id="content"
+      rows="5"
+      name="content"
+      class="form-input"
+    ></textarea>
+
+    <button type="submit" class="btn btn_add_post">Create</button>
+  </form>
+</div>
+<div class="new_post">
+  <button type="submit" class="btn btn_new">+ New Post</button>
+</div>
+
+<script src="/js/addPost.js"></script>
