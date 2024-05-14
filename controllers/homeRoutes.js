@@ -18,9 +18,7 @@ router.get("/", withAuth, async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render("homepage", {
-      logged_in: req.session.logged_in,
-    });
+    res.render("homepage", { posts, logged_in: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -45,7 +43,7 @@ router.get("/signup", (req, res) => {
 
   res.render("signup");
 });
-
+//goto the add post view
 router.get("/addPost", withAuth, (req, res) => {
   res.render("addPost", { logged_in: req.session.logged_in });
 });

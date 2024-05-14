@@ -1,7 +1,7 @@
 :root {
   --background: #c9e2c9a9; /*#ccdad1;*/
   --light: #ffffff;
-  --light-grey: #a197a1ce;
+  --light-grey: #b7aeb7;
   /*--tertiary: #788585;
   
   */
@@ -46,9 +46,9 @@ a {
 .card_header {
   display: flex;
   flex-direction: column;
-  color: var(--primary);
+  color: var(--light-grey);
   background-color: var(--dark);
-  padding: 0;
+  padding: 0 0 0 20px;
   margin: 0;
 }
 
@@ -79,6 +79,10 @@ body {
   flex-direction: column;
 }
 
+p,
+h3 {
+  margin: 0;
+}
 h1 {
   font-weight: 700;
   margin: 0;
