@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card_header">
+
+    <p>Posted by {{user.name}} on {{format_date post_date}}</p>
+  </div>
+  <div class="card_body">
+    {{content}}
+  </div>
+</div>
+
+<form class="card_body add_comment_form" id="add_comment_form" data-id="{{id}}">
+
+  <label class="form-label" for="content">Comment</label>
+  <textarea id="comment" rows="5" name="comment" class="form-input"></textarea>
+  <div>{{id}}</div>
+  <button class="btn btn_add_comment" type="submit">Submit</button>
+
+</form>
+<div>
+
+</div>
+
+<script src="/js/addComment.js"></script>

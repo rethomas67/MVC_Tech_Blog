@@ -1,10 +1,7 @@
 :root {
-  --background: #c9e2c9a9; /*#ccdad1;*/
+  --background: #c9e2c9a9;
   --light: #ffffff;
   --light-grey: #b7aeb7;
-  /*--tertiary: #788585;
-  
-  */
   --dark: #000000;
   --border-radius: 0.5rem;
 }
