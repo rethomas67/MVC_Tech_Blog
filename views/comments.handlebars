@@ -1,20 +1,24 @@
 <div class="card">
   <div class="card_header">
     <h3>{{title}}</h3>
-    <p>Posted by {{user.name}} on {{post_date}}</p>
+    <p>Posted by {{user.name}} on {{format_date post_date}}</p>
   </div>
   <div class="card_body">
     {{content}}
   </div>
 </div>
-<div class="card">
-  <div class="card_header">
-    {{#each comments as |comment|}}
+
+{{#each comments as |comment|}}
+  <div class="card">
+    <div class="card_header">
+
       <div class="card_body">
-        {{comment.comment}}
-        {{comment.user.name}}
+
+        <p>{{comment.comment}}</p>
+        <p>-{{comment.user.name}} {{format_date comment_date}}</p>
+
       </div>
 
-    {{/each}}
+    </div>
   </div>
-</div>
+{{/each}}

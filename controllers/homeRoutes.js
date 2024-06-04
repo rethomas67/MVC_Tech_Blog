@@ -47,9 +47,9 @@ router.get("/addPost", withAuth, (req, res) => {
   res.render("addPost", { logged_in: req.session.logged_in });
 });
 
-router.get("/userPost/:id", async (req, res) => {
+router.get("/userPost/:id", withAuth, async (req, res) => {
   try {
-    // Get all post and JOIN with user data
+    // Get a post and JOIN with user data
     const userPostData = await Post.findByPk(req.params.id, {
       include: [
         {
@@ -74,7 +74,7 @@ router.get("/userPost/:id", async (req, res) => {
 router.get("/comments/:id", async (req, res) => {
   try {
     // Get all post and JOIN with user data
-    console.log("here2");
+
     const userPostData = await Post.findByPk(req.params.id, {
       include: [
         {
@@ -86,8 +86,7 @@ router.get("/comments/:id", async (req, res) => {
 
     // Serialize data so the template can read it
     const userPost = userPostData.get({ plain: true });
-    const l = { ...userPost };
-    console.log(l);
+
     // Pass serialized data and session flag into template
     res.render("comments", {
       ...userPost,
