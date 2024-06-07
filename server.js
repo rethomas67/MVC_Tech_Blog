@@ -42,6 +42,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(routes);
 
+// deploy heroku
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
