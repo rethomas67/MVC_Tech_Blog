@@ -70,6 +70,7 @@ router.put("/:id", withAuth, async (req, res) => {
   }
 });
 
+//remove a post from the given id
 router.delete("/:id", withAuth, async (req, res) => {
   try {
     const postData = await Post.destroy({

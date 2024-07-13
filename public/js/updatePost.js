@@ -1,10 +1,10 @@
+//update a post filtered by id and passing the id, title, and content from the form to the API
 const updatePostHandler = async (event) => {
   event.preventDefault();
   const postId = event.currentTarget.getAttribute("data-id");
   const title = document.querySelector("#title").value.trim();
   const content = document.querySelector("#content").value.trim();
   if (postId && title && content) {
-    alert(postId + title + content);
     const response = await fetch(`/api/posts/${postId}`, {
       method: "PUT",
       body: JSON.stringify({ title, content }),
@@ -21,6 +21,7 @@ const updatePostHandler = async (event) => {
   }
 };
 
+//remove the post filtered by the post id
 const deletePostHandler = async (event) => {
   event.preventDefault();
   const postId = event.currentTarget.getAttribute("data-id");

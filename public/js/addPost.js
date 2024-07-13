@@ -1,3 +1,5 @@
+//add a post with the forms parameters on title, content, and the current date
+
 const addPostFormHandler = async (event) => {
   event.preventDefault();
 
@@ -15,7 +17,6 @@ const addPostFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      alert("here");
       document.location.replace("/");
     } else {
       alert("Failed to create project");

@@ -1,3 +1,5 @@
+//signup with the user and password parameters retrieved from the form
+
 const signupFormHandler = async (event) => {
   event.preventDefault();
 

@@ -1,3 +1,4 @@
+//add a comment to the post
 const addCommentHandler = async (event) => {
   event.preventDefault();
   const postId = event.currentTarget.getAttribute("data-id");

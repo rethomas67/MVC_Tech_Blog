@@ -1,3 +1,4 @@
+//navigate to the api controller to logout
 const logout = async () => {
   const response = await fetch("/api/users/logout", {
     method: "POST",
