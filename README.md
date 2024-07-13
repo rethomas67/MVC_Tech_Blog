@@ -30,5 +30,5 @@ When I am on the dashboard, I am able to click on a post and either update or re
 
 I have the option to logout. A session timeout will require me to relogin.
 
-GitHub Repository: https://github.com/rethomas67/Work_Day_Scheduler
-GitHub page link: https://rethomas67.github.io/Work_Day_Scheduler/
+GitHub Repository: https://github.com/rethomas67/MVC_Tech_Blog
+GitHub page link: https://bcs-mvc-tech-blog-976f30c4ac39.herokuapp.com/
